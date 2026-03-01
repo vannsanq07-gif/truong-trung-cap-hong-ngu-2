@@ -1,0 +1,179 @@
+* {box-sizing: border-box; }
+body {
+    font-family: 'Alfa Slab One';font-size: 22px;
+}
+/*Phần Header*/
+.header {display:flex;
+		align-items:center;
+		background-color:blue;
+		height:220px;}
+		
+.header img {float:left;
+			width:120px;
+			margin-left:50px;}
+			
+.header h1 {color:white;
+			width:100%;
+			text-align:center;
+			font-size:40px;
+			text-shadow: 4px 4px 8px #000000}
+			
+/*Phần Menu nav*/
+	.nav {overflow: hidden;
+		
+		background-color:green;
+		height: 45px; }			
+	.nav ul {list-style-type: none;
+		
+		margin: 0px;
+		padding: 0px;}		
+	.nav a {float: left;
+		display: block;
+		color: white;
+		text-align:center;
+		padding: 14px 10px;
+		text-decoration: none;}		
+	.nav a:hover {background-color:white;
+						color:green;}	
+
+/*Phần nội dung chính/Conten*/
+	.content {display:flex; flex-grow:1;}
+/*Phần cột 1*/
+	.col1 {width:25%; background-color:#f1f1f1;
+			flex-direction: column;
+			display: flex;
+			align-items: center;}
+	.col1 h3 {text-align:center;}
+	.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 180px;}
+	.gallery:hover {
+	border: 1px solid #777;}
+	.gallery img {
+		width: 100%;
+	height: auto;}
+	.desc {
+		padding: 15px;
+	text-align: center;}
+	
+/*Phần cột 2*/
+	.col2 {width:50%; padding:16px;}
+	.col2 img{float:right;width:300px;
+		padding-left:14px;}
+	.col2 h3 {text-align:center;
+		color:tamato;}
+	.col2 p {text-align:justify;  
+		font-size: 14px;
+		line-height:1.5;}	
+	.dropcap {float:left;
+			font-size:60pt;
+			color: Blue;
+	line-height:40px;}
+		
+		
+/*Phần cột 3*/
+	.col3 {width:25%; background-color:f1f1f1;}
+	.col3 img{align-items:center;}
+	.col h4 {text-items: center;
+			}
+	.col button {align-items:center;}
+/*Phần Footer*/
+	.footer {background-color:blue;
+		padding: 10px 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;}		
+	.footer p {margin-left: 100px;
+			color: white;}
+	.footer img {width: 90px;}
+	/* --- RESPONSIVE DESIGN ---*/
+/* 1. Đảm bảo hình ảnh không vượt quá chiều rộng màn hình*/
+@media screen and (max-width:992px){
+	.content{ flex-wrap:wrap}
+		.col1,.col3{width:100%;}
+		.col2{width:100%; order:-1;}
+		.header h1{ font-size:25pt;}
+}
+
+@media screen and (max-width:600px){
+	.header{flex-direction:column;height: auto;padding:20px 0;}
+	.header img{margin-left: 0;margin-bottom: 10px;}
+	.header h1{ font-size:18 pt}
+	.nav ul { flex-direction: column; text-align: center;}
+	.nav {height:auto}
+	.nav a { float: none; width:100%;border-bottom: 1px solid rgba (255,255,255,0,2);}
+	.col1,.col2,.col3{width:100%;}
+	.col2 img{ float:none;width:100%;padding-left:0;margin-bottom:15px;}
+	.footer{ flex-direction:column;text-align:center;}
+	.footer p { margin-left: 0; margin-bottom:15px;}
+	.ifame { width:100% !important;height:auto;}
+}
+
+/* ===== TRANG ĐĂNG NHẬP (Bổ sung) ===== */
+
+.login-container {
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    min-height: 500px;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    border-top: 5px solid blue;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 25px;
+    font-size: 20pt;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14pt;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12pt;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
